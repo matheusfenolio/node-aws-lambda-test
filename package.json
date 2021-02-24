@@ -6,8 +6,6 @@
   "author": "Matheus Prado <matheusfenoliodoprado@outlook.com>",
   "license": "MIT",
   "dependencies": {
-    "aws-sdk": "^2.850.0",
-    "axios": "^0.21.1",
     "express": "^4.17.1"
   }
 }
