@@ -1,0 +1,13 @@
+{
+  "name": "node-aws-lambda-test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/matheusfenolio/node-aws-lambda-test.git",
+  "author": "Matheus Prado <matheusfenoliodoprado@outlook.com>",
+  "license": "MIT",
+  "dependencies": {
+    "aws-sdk": "^2.850.0",
+    "axios": "^0.21.1",
+    "express": "^4.17.1"
+  }
+}
