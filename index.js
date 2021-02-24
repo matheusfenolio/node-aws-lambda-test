@@ -1,9 +1,12 @@
-const awsServerlessExpress = require('aws-serverless-express');
-const app = require('./app');
+const serverless = require('serverless-http');
+const express = require('express');
+const app = express();
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
-const server = awsServerlessExpress.createServer(app);
-
-exports.handler = (event, context) => {
-    console.log(`EVENT: `, JSON.stringify(event));
-    awsServerlessExpress.proxy(server, event, context);
-}
+app.get('/getIndividuals', (req, res) => {
+console.log('aaaaaaaaa', req.headers.lastname)
+res.send({ ...req.headers });
+});
+//app.listen(3000, () => console.log(`Listening on: 3000`));
+module.exports.handler = serverless(app);
