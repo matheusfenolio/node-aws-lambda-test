@@ -6,6 +6,7 @@
   "author": "Matheus Prado <matheusfenoliodoprado@outlook.com>",
   "license": "MIT",
   "dependencies": {
+    "aws-serverless-express": "^3.4.0",
     "express": "^4.17.1"
   }
 }

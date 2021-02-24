@@ -1,9 +1,9 @@
-'use strict'
+const awsServerlessExpress = require('aws-serverless-express');
+const app = require('./app');
 
-const express = require('express');
+const server = awsServerlessExpress.createServer(app);
 
-const handler = express();
-
-handler.get('/test', async (req, res) => res.send(`Hello World!`, req.headers));
-
-module.exports = handler;
+exports.handler = (event, context) => {
+    console.log(`EVENT: `, JSON.stringify(event));
+    awsServerlessExpress.proxy(server, event, context);
+}
